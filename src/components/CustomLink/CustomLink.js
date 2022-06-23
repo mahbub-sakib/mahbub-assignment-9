@@ -11,6 +11,8 @@ function CustomLink({ children, to, ...props }) {
                 style={{
                     color: match ? 'red' : 'black',
                     textDecoration: "none",
+                    borderBottomStyle: 'solid',
+                    borderBottomColor: match ? 'coral' : 'black'
 
                 }}
                 to={to}
@@ -19,7 +21,7 @@ function CustomLink({ children, to, ...props }) {
                 {children}
             </Link>
             {/* {match && " (active)"} */}
-        </div>
+        </div >
     );
 }
 
