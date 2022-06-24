@@ -1,7 +1,23 @@
 import React from 'react';
 import './Home.css';
+import useReviews from '../../hooks/useReviews';
+import Review from '../Review/Review';
 
 const Home = () => {
+    const [reviews, setReviews] = useReviews([]);
+
+    const getSomeReview = () => {
+        let content = [];
+        if (reviews.length != 0) {
+            for (let i = 0; i < 3; i++) {
+                const item = reviews[i];
+                content.push(<Review key={item.id} item={item}></Review>);
+            }
+            return content;
+        }
+
+    }
+
     return (
         <div>
             <div className='row mt-5 d-flex align-items-center justify-content-center'>
@@ -17,7 +33,10 @@ const Home = () => {
                     <img src="./images/canvas-image.jpg" className='canvas-image' alt="" />
                 </div>
             </div>
-
+            <div className='mt-5'>
+                <h1>Customer Reviews(3)</h1>
+                {getSomeReview()}
+            </div>
 
         </div>
     );
