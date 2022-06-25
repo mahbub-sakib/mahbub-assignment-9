@@ -2,11 +2,12 @@ import React from 'react';
 import './Home.css';
 import useReviews from '../../hooks/useReviews';
 import Review from '../Review/Review';
-import { CardGroup } from 'react-bootstrap';
+import { Button, CardGroup } from 'react-bootstrap';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Home = () => {
     const [reviews, setReviews] = useReviews([]);
-
+    const navigate = useNavigate();
     const getSomeReview = () => {
         let content = [];
         if (reviews.length != 0) {
@@ -19,6 +20,10 @@ const Home = () => {
 
     }
 
+    const goToReviewPage = () => {
+        const path = `/reviews/`;
+        navigate(path);
+    }
     return (
         <div>
             <div className='row mt-5 d-flex align-items-center justify-content-center'>
@@ -39,6 +44,8 @@ const Home = () => {
                 <CardGroup>
                     {getSomeReview()}
                 </CardGroup>
+
+                <Button variant="primary" className='m-3' onClick={goToReviewPage}>See All Reviews</Button>
 
             </div>
 
