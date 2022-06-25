@@ -17,7 +17,6 @@ const Home = () => {
             }
             return content;
         }
-
     }
 
     const goToReviewPage = () => {
