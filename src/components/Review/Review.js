@@ -1,15 +1,24 @@
 import React from 'react';
+import { Card } from 'react-bootstrap';
+import './Review.css';
 
 const Review = (props) => {
     const { item } = props;
-    const { name, desc, rating } = item;
+    const { id, name, desc, rating } = item;
+    const image_location = `./images/users/user-${id}.jpg`;
     return (
-        <div>
-            <h2>A single review</h2>
-            <p>Name: {name}</p>
-            <p>Description: {desc}</p>
-            <p>Ratings: {rating}</p>
-        </div>
+        <Card >
+            <Card.Img variant="top" className='card_img' src={image_location} />
+            <Card.Body>
+                <Card.Title>Name: {name}</Card.Title>
+                <Card.Text>
+                    Description: {desc}
+                </Card.Text>
+            </Card.Body>
+            <Card.Footer>
+                <small className="text-muted">Ratings: {rating}</small>
+            </Card.Footer>
+        </Card>
     );
 };
 

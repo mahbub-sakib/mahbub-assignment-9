@@ -2,6 +2,7 @@ import React from 'react';
 import './Home.css';
 import useReviews from '../../hooks/useReviews';
 import Review from '../Review/Review';
+import { CardGroup } from 'react-bootstrap';
 
 const Home = () => {
     const [reviews, setReviews] = useReviews([]);
@@ -33,9 +34,12 @@ const Home = () => {
                     <img src="./images/canvas-image.jpg" className='canvas-image' alt="" />
                 </div>
             </div>
-            <div className='mt-5'>
+            <div className='mt-5 container'>
                 <h1>Customer Reviews(3)</h1>
-                {getSomeReview()}
+                <CardGroup>
+                    {getSomeReview()}
+                </CardGroup>
+
             </div>
 
         </div>
