@@ -20,7 +20,7 @@ const Home = () => {
     }
 
     const goToReviewPage = () => {
-        const path = `/reviews/`;
+        const path = `/reviews`;
         navigate(path);
     }
     return (

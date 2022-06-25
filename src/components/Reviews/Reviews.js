@@ -22,8 +22,8 @@ const Reviews = () => {
         )
     }
     return (
-        <div className='use-grid mt-5'>
-            {reviews.map(renderCard)}
+        <div className='use-grid m-5'>
+            {reviews.length != 0 && reviews.map(renderCard)}
         </div>
     );
 };
