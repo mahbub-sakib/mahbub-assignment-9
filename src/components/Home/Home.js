@@ -34,7 +34,7 @@ const Home = () => {
 
                 </div>
 
-                <div className='col-md-5  '>
+                <div className='col-md-5 '>
                     <img src="./images/canvas-image.jpg" className='canvas-image' alt="" />
                 </div>
             </div>

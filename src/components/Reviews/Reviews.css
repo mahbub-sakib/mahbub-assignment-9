@@ -3,7 +3,16 @@
     display: grid;
     flex-wrap: wrap;
     flex-direction: row;
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .use-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 1em;
+        grid-row-gap: 100px;
+    }
 }
