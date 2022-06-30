@@ -2,7 +2,7 @@ Project name: Rate The Furniture
 
 Private repo link: https://github.com/programming-hero-web-course-4/product-analysis-website-mahbub-sakib
 
-Live website link
+Live website link: https://mahbub-sakib-assignment-9.netlify.app
 
 Project key points:
 
