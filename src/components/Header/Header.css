@@ -15,3 +15,43 @@
     gap: 2rem;
     margin: 10px;
 }
+
+.menu-icon {
+    height: 5%;
+    width: 5%;
+    transform: translate(360px);
+
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        background-color: lightskyblue;
+        width: 100%;
+    }
+
+    .nav-anime-open {
+        position: absolute;
+        top: 20px;
+        background-color: lightskyblue;
+        width: 100%;
+        transition: all .5s;
+        transition-timing-function: ease-in;
+        z-index: 2;
+    }
+
+    .nav-anime-close {
+        position: absolute;
+        top: -300px;
+        background-color: lightskyblue;
+        width: 100%;
+        transition: all .5s;
+        transition-timing-function: ease-in;
+        z-index: 2;
+    }
+
+    .navbar-item {
+        display: block;
+        margin: 0 0;
+        /* line-height: 30px; */
+    }
+}
